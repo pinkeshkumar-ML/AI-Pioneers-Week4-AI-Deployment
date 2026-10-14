@@ -1,0 +1,9 @@
+Week 4 Task: AI Project Deployment & Capstone
+
+This project demonstrates an end-to-end machine-learning workflow through a Student Score Predictor built with Python and scikit-learn. A reproducible synthetic dataset is generated with study hours, attendance percentage, previous score, and a target final score. The data is split into training and testing sets. A scikit-learn pipeline applies feature scaling and trains a Linear Regression model.
+
+The model is evaluated on the held-out test set using Mean Absolute Error (MAE), Root Mean Squared Error (RMSE), and R-squared (R²). The trained pipeline is saved with Joblib so it can be loaded by a separate application. The project includes a Flask web application with a simple form and a JSON prediction endpoint at POST /predict. A GET /health endpoint reports whether the saved model is available. Input validation checks required fields, numeric values, and reasonable value ranges.
+
+To run the project, install the dependencies from requirements.txt, run python train_model.py to generate the sample dataset, evaluation metrics, and model artifact, and then run python app.py. The application can be tested locally at http://127.0.0.1:5000. The README documents setup, usage, API input format, limitations, and deployment considerations.
+
+The dataset is synthetic and created for learning purposes. The predictions are not real academic assessments and should not be used for decisions about students. This capstone helped connect data preparation, model training, testing, serialization, API development, and application deployment into one workflow.
